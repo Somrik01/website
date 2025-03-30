@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<body>
+    <header>
+        <h1>AI Resume Builder</h1>
+    </header>
+
+    <div class="container">
+        <form id="resume-form">
+            <h2>Personal Details</h2>
+            <label>Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label>Email:</label>
+            <input type="email" id="email" required>
+
+            <label>Phone:</label>
+            <input type="text" id="phone" required>
+
+            <h2>Objective</h2>
+            <textarea id="objective" placeholder="Write your career objective..."></textarea>
+
+            
+            <h2>Education</h2>
+            <textarea id="education" placeholder="Your education details..."></textarea>
+
+            <h2>Experience</h2>
+            <textarea id="experience" placeholder="Describe your experience..."></textarea>
+
+            
+            <h2>Projects</h2>
+            <textarea id="projects" placeholder="List your projects..."></textarea>
+
+            <h2>Skills (comma-separated)</h2>
+            <input type="text" id="skills" placeholder="e.g., JavaScript, Python, React">
+
+
+            <h2>Certifications</h2>
+            <textarea id="certifications" placeholder="Your certifications..."></textarea>
+
+            <h2>AI Resume Summary</h2>
+            <button type="button" onclick="generateAISummary()">Generate with AI</button>
+            <p id="ai-summary"></p>
+
+            <h2>ATS Score</h2>
+            <button type="button" onclick="calculateATS()">Check ATS Score</button>
+            <p id="ats-score"></p>
+
+            <button type="button" onclick="generatePDF()">Download Resume</button>
+        </form>
+
+        <div id="resume-preview">
+            <h2>Resume Preview</h2>
+            <div id="resume-output"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
